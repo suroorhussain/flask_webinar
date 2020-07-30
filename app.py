@@ -7,9 +7,8 @@ app = Flask(__name__)
 def home():
     return render_template('home.html')
 
-@app.route('/article/test/')
-def view_article():
-    title = 'test'
+@app.route('/article/<title>/')
+def view_article(title):
     content = load_article(title)
     return render_template('article.html', title=title, content=content)
 
