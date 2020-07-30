@@ -11,7 +11,7 @@ def home():
 def view_article():
     title = 'test'
     content = load_article(title)
-    return title + '\n' + content
+    return render_template('article.html', title=title, content=content)
 
 if __name__ == '__main__':
     app.run(debug=True)
