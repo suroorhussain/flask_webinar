@@ -1,3 +1,4 @@
 * Flask Webinar
-  A simple flask application
+  - Every commit from `49f272d` is supposed to be represent one topic.
+  - The utils.py file simulates the wiki library to provide functions to read write and list articles.
   
