@@ -1,11 +1,12 @@
 from flask import Flask, render_template, request, redirect, url_for
-from utils import load_article, save_article
+from utils import load_article, save_article, list_articles
 
 app = Flask(__name__)
 
 @app.route('/')
 def home():
-    return render_template('home.html')
+    titles = list_articles()
+    return render_template('home.html', titles=titles)
 
 @app.route('/article/<title>/')
 def view_article(title):

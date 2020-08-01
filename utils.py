@@ -14,4 +14,4 @@ def load_article(title):
     return content
 
 def list_articles():
-    return os.listdir(WIKI_DIR)
+    return [i.split('.')[0] for i in os.listdir(WIKI_DIR)]
